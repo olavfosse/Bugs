@@ -1,4 +1,5 @@
 *MVE and Reproducing*
+
 Jacking into good/index.clj and evaluating the buffer with C-c C-k
 works as expected.
 
@@ -28,12 +29,13 @@ diff good/index.clj bad/index.clj
 < (require '[datahike.api :as d])
 ---
 > (require '[datahike.api :as d]
->          '[sail.core :as sail])
+v>          '[sail.core :as sail])
 5a7
 >
 #+end_example
 
 *Context*
+
 I'm able to use datahike along with other libraries, no problem. I
 just wanted to try out sail, so my personal solution to this problem
 is to just not use sail.
@@ -49,6 +51,7 @@ CIDER 1.14 snapshot and tested again. The issue did not go away.
 | *JDK*         | Temurin-21.0.1+12   |
 
 *Exception*
+
 #+begin_quote
         ReentrantLock.java:  180  java.util.concurrent.locks.ReentrantLock$Sync/tryRelease
 AbstractQueuedSynchronizer.java: 1059  java.util.concurrent.locks.AbstractQueuedSynchronizer/release
