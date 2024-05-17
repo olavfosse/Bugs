@@ -41,12 +41,12 @@ is to just not use sail.
 The stacktrace below came from CIDER 1.13.1. Afterwards I upgraded to
 CIDER 1.14 snapshot and tested again. The issue did not go away.
 
-|               |           *Version* |
+|               | *Version*           |
 |---------------+---------------------|
-| *Emacs*       |                29.2 |
+| *Emacs*       | 29.2                |
 | *OS*          | macOS Sonoma 14.2.1 |
-| *Clojure CLI* |         1.11.1.1435 |
-|               |                     |
+| *Clojure CLI* | 1.11.1.1435         |
+| *JDK*         | Temurin-21.0.1+12   |
 
 *Exception*
 #+begin_quote
