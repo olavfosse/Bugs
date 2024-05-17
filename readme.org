@@ -1,3 +1,4 @@
+*MVE and Reproducing*
 Jacking into good/index.clj and evaluating the buffer with C-c C-k
 works as expected.
 
@@ -32,13 +33,20 @@ diff good/index.clj bad/index.clj
 >
 #+end_example
 
+*Context*
 I'm able to use datahike along with other libraries, no problem. I
 just wanted to try out sail, so my personal solution to this problem
 is to just not use sail.
 
-Currently I am using CIDER 1.13.1, but I downgraded from the bleeding
-edge version with the intention of avoiding this issue, so this is
-probably an issue in CIDER 1.14 too.
+The stacktrace below came from CIDER 1.13.1. Afterwards I upgraded to
+CIDER 1.14 snapshot and tested again. The issue did not go away.
+
+|               |           *Version* |
+|---------------+---------------------|
+| *Emacs*       |                29.2 |
+| *OS*          | macOS Sonoma 14.2.1 |
+| *Clojure CLI* |         1.11.1.1435 |
+|               |                     |
 
 *Exception*
 #+begin_quote
