@@ -1,0 +1,31 @@
+good/ and bad/ are the same except bad requires [sail.core :as sail].
+
+Jacking into good/index.clj and evaluating the buffer with C-c C-k
+works as expected.
+
+Jacking into bad/index.clj and evaluating the buffer with C-c C-k
+results in a nasty exception
+
+(cider-version) -> "CIDER 1.13.1 (Santiago)"
+
+#+begin_src shell :results output
+  diff good bad
+#+end_src
+
+#+RESULTS:
+#+begin_example
+diff good/deps.edn bad/deps.edn
+2c2,3
+<         io.replikativ/datahike {:mvn/version "0.6.1559"}}}
+---
+>         io.replikativ/datahike {:mvn/version "0.6.1559"}
+>         com.hypalynx/sail {:mvn/version "0.8.15"}}}
+diff good/index.clj bad/index.clj
+1c1,2
+< (require '[datahike.api :as d])
+---
+> (require '[datahike.api :as d]
+>          '[sail.core :as sail])
+5a7
+>
+#+end_example
