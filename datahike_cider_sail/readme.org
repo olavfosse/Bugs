@@ -1,3 +1,5 @@
+reported: https://github.com/clojure-emacs/cider/issues/3667
+
 *MVE and Reproducing*
 
 Jacking into good/index.clj and evaluating the buffer with C-c C-k
